@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PopUpView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdV-Bq-1GT">
+                                <rect key="frame" x="120" y="218" width="79" height="30"/>
+                                <state key="normal" title="自定义View"/>
+                                <connections>
+                                    <action selector="popUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Kg-4R-AEk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-mC-81S">
+                                <rect key="frame" x="87" y="320" width="147" height="30"/>
+                                <state key="normal" title="自定义ViewController"/>
+                                <connections>
+                                    <segue destination="1Jo-Pa-lSa" kind="presentation" identifier="ShowPopView" id="iH2-SY-WuT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qrO-mC-81S" secondAttribute="bottom" constant="218" id="ARM-ce-bCk"/>
+                            <constraint firstAttribute="trailing" secondItem="FdV-Bq-1GT" secondAttribute="trailing" constant="121" id="Adb-Ic-hyA"/>
+                            <constraint firstItem="FdV-Bq-1GT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="198" id="Bot-K6-B8u"/>
+                            <constraint firstItem="qrO-mC-81S" firstAttribute="top" secondItem="FdV-Bq-1GT" secondAttribute="bottom" constant="72" id="Iiy-h2-HBn"/>
+                            <constraint firstAttribute="trailing" secondItem="qrO-mC-81S" secondAttribute="trailing" constant="86" id="krK-h4-WW0"/>
+                            <constraint firstItem="FdV-Bq-1GT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="120" id="rEh-Vr-OnR"/>
+                            <constraint firstItem="qrO-mC-81S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="87" id="xSS-7A-m6Z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Hud View Controller-->
+        <scene sceneID="AYd-g2-oIY">
+            <objects>
+                <viewController id="1Jo-Pa-lSa" customClass="HudViewController" customModule="PopUpView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cDZ-ho-Cvr"/>
+                        <viewControllerLayoutGuide type="bottom" id="jYx-gw-SNs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FGX-Nw-wbR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHa-xq-VRp">
+                                <rect key="frame" x="40" y="164" width="240" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="这是一个Pop-up View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pie-Xc-SDJ">
+                                        <rect key="frame" x="36" y="110" width="168" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgM-XC-cny">
+                                        <rect key="frame" x="97" y="200" width="46" height="30"/>
+                                        <state key="normal" title="关闭">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="close:" destination="1Jo-Pa-lSa" eventType="touchUpInside" id="oIi-vL-7p0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.90145239093959728" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Pie-Xc-SDJ" firstAttribute="top" secondItem="wHa-xq-VRp" secondAttribute="top" constant="110" id="69Y-ia-U3s"/>
+                                    <constraint firstItem="RgM-XC-cny" firstAttribute="leading" secondItem="wHa-xq-VRp" secondAttribute="leading" constant="97" id="91t-it-5of"/>
+                                    <constraint firstAttribute="trailing" secondItem="RgM-XC-cny" secondAttribute="trailing" constant="97" id="EDl-Y9-F5Z"/>
+                                    <constraint firstItem="RgM-XC-cny" firstAttribute="top" secondItem="Pie-Xc-SDJ" secondAttribute="bottom" constant="69" id="MnQ-HR-4bv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pie-Xc-SDJ" secondAttribute="bottom" constant="109" id="Oar-dK-Fid"/>
+                                    <constraint firstAttribute="height" constant="240" id="XEO-pl-ijO"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pie-Xc-SDJ" secondAttribute="trailing" constant="36" id="eTo-ib-c5f"/>
+                                    <constraint firstItem="Pie-Xc-SDJ" firstAttribute="leading" secondItem="wHa-xq-VRp" secondAttribute="leading" constant="36" id="eqn-TB-xLH"/>
+                                    <constraint firstAttribute="bottom" secondItem="RgM-XC-cny" secondAttribute="bottom" constant="10" id="iVY-bM-BWL"/>
+                                    <constraint firstAttribute="width" constant="240" id="lVq-xK-Fn3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wHa-xq-VRp" firstAttribute="centerY" secondItem="FGX-Nw-wbR" secondAttribute="centerY" id="1l0-fu-sMA"/>
+                            <constraint firstItem="wHa-xq-VRp" firstAttribute="centerX" secondItem="FGX-Nw-wbR" secondAttribute="centerX" id="n9j-Ab-LqL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="popView" destination="wHa-xq-VRp" id="5KF-Ce-Kuh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qoN-Jq-HAp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="35"/>
+        </scene>
+    </scenes>
+</document>
