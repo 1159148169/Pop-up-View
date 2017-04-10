@@ -25,8 +25,12 @@ class HudViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        popView.layer.cornerRadius = 10
-        // Do any additional setup after loading the view.
+        popView.layer.cornerRadius = 10 // 设置圆角
+        
+//        popView.backgroundColor = UIColor.clear // 此行代码很有趣
+        
+        view.backgroundColor = UIColor.clear
+
     }
     
     

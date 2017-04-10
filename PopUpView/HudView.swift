@@ -40,6 +40,8 @@ class HudView: UIView {
         
         text.draw(at: textPoint, withAttributes: attribs)
         
+        
+        
     }
     
     // HUD动画
